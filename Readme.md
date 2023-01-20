@@ -1,9 +1,5 @@
 # &middot; sinergicon-landing 💜 &middot;
 
-![version](https://img.shields.io/github/package-json/v/he4rt/he4rt-landing)
-![License](https://github.com/he4rt/sinergicon-landing)
-![Discord](https://img.shields.io/discord/452926217558163456)
-
 O sinergicon-landing é um projeto **Open-Source** criado em parceira com a empresa parceira da He4rt Sinergicon.
 
 <br/>
