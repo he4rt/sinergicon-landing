@@ -1,3 +1,5 @@
+import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
+
 import * as path from "path";
 import { defineConfig } from "vite";
 
@@ -7,7 +9,11 @@ const resolve = (p: string) => {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [],
+  plugins: [
+    vanillaExtractPlugin({
+      // configuration
+    }),
+  ],
   server: {
     https: false,
   },
