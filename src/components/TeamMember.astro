@@ -15,7 +15,7 @@ const { name, role, picture, alt = '' } = Astro.props
   >
     <img src={picture} alt={alt} class="h-full object-cover" />
   </div>
-  <div class="my-5 text-center font-montserrat">
+  <div class="font-montserrat my-5 text-center">
     <h2
       class="text-xl font-bold text-black transition group-hover:text-primary"
     >
@@ -24,7 +24,7 @@ const { name, role, picture, alt = '' } = Astro.props
     <p class="mt-3 font-medium text-gray">{role}</p>
   </div>
 
-  <div class="h-[1px] w-full bg-lightgray"></div>
+  <div class="bg-lightgray h-[1px] w-full"></div>
 
   <div class="mt-5 flex w-full justify-around px-4">
     <div
