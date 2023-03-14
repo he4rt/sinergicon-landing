@@ -6,10 +6,20 @@ interface Props {
 }
 
 const { title, content, color = '#3DA9FC' } = Astro.props
+const analogColor = getAnalogColor(color)
+
+function getAnalogColor(rgbColor: string): string {
+  if (rgbColor == '61, 169, 252') return `145, 61, 252`
+  if (rgbColor == '252, 130, 61') return `252, 61, 87`
+  if (rgbColor == '239, 69, 101') return `239, 69, 186`
+  if (rgbColor == '59, 232, 118') return `87, 232, 59`
+  if (rgbColor == '145, 61, 252') return `61, 73, 252`
+  return ''
+}
 ---
 
 <div
-  class="rounded-xl bg-transparent p-0.5 transition hover:-translate-y-1 hover:bg-gradient-to-b hover:from-[#3DA9FC] hover:to-[#913DFC] hover:shadow-xl hover:shadow-[#913DFC]/20"
+  class="gradient-bg card-shadow rounded-xl bg-transparent p-0.5 transition duration-200 hover:-translate-y-1.5"
 >
   <div class="flex h-full flex-col rounded-xl bg-white py-4 px-6">
     <div class="icon-bg-color flex h-8 w-8 items-center justify-center rounded">
@@ -20,8 +30,21 @@ const { title, content, color = '#3DA9FC' } = Astro.props
   </div>
 </div>
 
-<style define:vars={{ color }}>
+<style define:vars={{ color, analogColor }}>
   .icon-bg-color {
-    background-color: var(--color);
+    background-color: rgb(var(--color));
+  }
+
+  .gradient-bg:hover {
+    background: linear-gradient(
+      to bottom,
+      rgb(var(--color)),
+      rgb(var(--analogColor))
+    );
+  }
+
+  .card-shadow:hover {
+    box-shadow: 0 10px 20px -3px rgba(var(--analogColor), 0.1),
+      0 4px 8px -4px rgba(var(--analogColor), 0.1);
   }
 </style>
