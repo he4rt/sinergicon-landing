@@ -12,8 +12,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
       work: ['Work Sans'],
+      montserrat: ['Montserrat'],
       space: ['Space Grotesk'],
     },
   },
