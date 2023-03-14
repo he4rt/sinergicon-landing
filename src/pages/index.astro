@@ -1,11 +1,14 @@
 ---
 import '@fontsource/montserrat/700.css'
+import '@fontsource/montserrat/500.css'
 import '@fontsource/work-sans/500.css'
 import '@fontsource/space-grotesk/700.css'
 
 import ServiceItem from '../components/ServiceItem.astro'
 
 import { ourServicesList } from '../data'
+import SectionWrapper from '../components/SectionWrapper.astro'
+import TestimonyItem from '../components/TestimonyItem.astro'
 ---
 
 <html>
@@ -50,5 +53,25 @@ import { ourServicesList } from '../data'
         }
       </div>
     </section>
+
+    <SectionWrapper
+      subtitle="LOREM IPSUM DOLOR SIT"
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+      bgClass="bg-light"
+    >
+      <h1 slot="title">
+        Confira alguns <span class="text-primary">depoimentos</span> de nossos clientes
+      </h1>
+
+      <TestimonyItem
+        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum."
+        author={{
+          name: 'Mc Poze do Rodo',
+          role: 'Cantor',
+          imageUrl:
+            'https://i.pinimg.com/474x/ff/0d/f4/ff0df44c4cd43c7cd964e36b4354e56b.jpg',
+        }}
+      />
+    </SectionWrapper>
   </body>
 </html>
