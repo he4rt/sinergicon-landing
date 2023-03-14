@@ -20,27 +20,16 @@ import TestimonyItem from '../components/TestimonyItem.astro'
     <title>Sinergicon</title>
   </head>
   <body>
-    <section class="flex flex-col items-center justify-center">
-      <div class="max-w-[770px] text-center">
-        <div class="flex flex-col items-center font-montserrat">
-          <h4 class="font-bold uppercase text-primary">
-            LOREM IPSUM DOLOR SIT
-          </h4>
-          <h1 class="my-4 w-10/12 text-[2.6rem] font-bold text-dark">
-            Venha conhecer os nossos <span class="text-primary">serviços</span>
-          </h1>
-        </div>
-        <p class="font-work text-gray">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          dimentum facilisis interdum. Orci varius natoque penatibus et magnis
-          dis parturient montes, nascetur ridiculus mus.
-        </p>
-      </div>
-
-      <div class="my-11 h-[1px] w-full bg-lightgray"></div>
+    <SectionWrapper
+      subtitle="LOREM IPSUM DOLOR SIT"
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum. Orci varius natoque penatibus magnis dis parturient montes, nascetur ridiculus mus."
+    >
+      <h1 slot="title">
+        Venha conhecer os nossos <span class="text-primary">serviços</span>
+      </h1>
 
       <div
-        class="my-5 grid max-w-[1184px] grid-cols-3 grid-rows-2 gap-x-12 gap-y-7"
+        class="my-5 grid max-w-[1184px] grid-cols-3 grid-rows-2 gap-x-12 gap-y-8"
       >
         {
           ourServicesList.map((service) => (
@@ -52,7 +41,7 @@ import TestimonyItem from '../components/TestimonyItem.astro'
           ))
         }
       </div>
-    </section>
+    </SectionWrapper>
 
     <SectionWrapper
       subtitle="LOREM IPSUM DOLOR SIT"
