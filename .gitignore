@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-# Logs
-logs
-*.log
-=======
->>>>>>> 4992857 (feat: setup astro)
 # build output
 dist/
 # generated types
@@ -15,37 +7,10 @@ dist/
 node_modules/
 
 # logs
-<<<<<<< HEAD
-=======
->>>>>>> 5996f1f (feat: setup astro)
->>>>>>> 4992857 (feat: setup astro)
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-lerna-debug.log*
->>>>>>> 4992857 (feat: setup astro)
-
-
-# environment variables
-.env
-.env.production
-
-# macOS-specific files
-.DS_Store
-<<<<<<< HEAD
-
-.vscode
-=======
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-=======
 
 
 # environment variables
@@ -56,5 +21,3 @@ lerna-debug.log*
 .DS_Store
 
 .vscode
->>>>>>> 5996f1f (feat: setup astro)
->>>>>>> 4992857 (feat: setup astro)
