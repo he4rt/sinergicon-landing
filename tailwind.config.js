@@ -10,9 +10,11 @@ module.exports = {
         light: '#D8EEFE',
         gray: '#606C7A',
       },
-      fontFamily: {
-        sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
-      },
+    },
+    fontFamily: {
+      sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
+      work: ['Work Sans'],
+      space: ['Space Grotesk'],
     },
   },
   plugins: [],
