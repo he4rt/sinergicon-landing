@@ -5,14 +5,14 @@ interface Props {
   color?: string
 }
 
-const { title, content, color = 'red' } = Astro.props
+const { title, content, color = '#3DA9FC' } = Astro.props
 ---
 
 <div
   class="rounded-xl bg-transparent p-0.5 transition hover:-translate-y-1 hover:bg-gradient-to-b hover:from-[#3DA9FC] hover:to-[#913DFC] hover:shadow-xl hover:shadow-[#913DFC]/10"
 >
   <div class="flex h-full flex-col rounded-xl bg-white py-4 px-6">
-    <div class="test flex h-8 w-8 items-center justify-center rounded">
+    <div class="icon-bg-color flex h-8 w-8 items-center justify-center rounded">
       <img src="/Icon.svg" />
     </div>
     <h3 class="my-3 font-montserrat text-xl font-bold text-dark">{title}</h3>
@@ -21,7 +21,7 @@ const { title, content, color = 'red' } = Astro.props
 </div>
 
 <style define:vars={{ color }}>
-  .test {
+  .icon-bg-color {
     background-color: var(--color);
   }
 </style>
