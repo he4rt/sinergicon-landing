@@ -1,0 +1,23 @@
+---
+interface Props {
+  error?: boolean
+  placeholder: string
+  label: string
+  errorMsg: string
+}
+
+const { error = false, placeholder, label, errorMsg } = Astro.props
+---
+
+<form class="my-12 flex flex-col font-montserrat text-dark">
+  <label class="mb-2 font-bold">{label}</label>
+  <input
+    type="text"
+    placeholder={placeholder}
+    class:list={[
+      'rounded-xl bg-light p-4 text-dark outline-none border-2 placeholder:text-dark/50',
+      error ? 'border-red-500' : 'focus:border-dark border-transparent',
+    ]}
+  />
+  {error && <p class="mt-2 text-sm text-red-500">{errorMsg}</p>}
+</form>
