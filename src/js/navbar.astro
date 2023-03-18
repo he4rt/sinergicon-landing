@@ -1,0 +1,122 @@
+<script>
+const nav = document.querySelector("header > nav");
+const btn = document.querySelector("button.mobile-menu-button");
+const menu = document.querySelector(".mobile-menu");
+
+
+  btn.addEventListener('click', () => {
+  window.scrollTo({ top: 0 })
+  document.querySelector('body').classList.toggle('overflow-y-hidden')
+  menu.classList.toggle('hidden')
+  nav.querySelector('div').classList.toggle('bg-primary')
+  nav.classList.toggle('h-screen')
+  nav.classList.toggle('bg-white')
+  btn.querySelector('svg').classList.toggle('text-white')
+})
+
+</script>
+
+<header class="bg-primary z-50 flex sticky top-0 justify-center font-work">
+  <nav class="w-full max-w-[1184px] mx-auto">
+    <div class="lg:container lg:mx-auto p-4">
+      <div class="flex justify-end lg:justify-between">
+        <div
+          class="hidden lg:flex items-center justify-start lg:space-x-8 font-bold text-white"
+        >
+          <a
+            href=""
+            aria-current="page"
+            >Início</a
+          >
+          <a aria-current="page"
+            >Sobre nós</a
+          >
+          <a aria-current="page"
+            >Nosso time</a
+          >
+          <a
+            aria-current="page"
+            >Clientes</a
+          >
+          <a
+          aria-current="page"
+          >Contato</a
+        >
+        </div>
+        <div class="lg:flex justify-end hidden">
+          <a>
+            <button
+              type="button"
+              class="bg-white text-bl text-primary rounded-lg text-md p-3 text-center mr-3 md:mr-0 font-bold text-md"
+            >
+            Entrar em contato
+            </button></a
+          >
+        </div>
+        <div class="lg:hidden flex items-center">
+          <button class="outline-none mobile-menu-button">
+            <svg
+              class="w-6 h-6 text-white"
+              x-show="!showMenu"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="hidden bg-primary text-white font-bold mobile-menu h-full z-30 px-6 py-16 w-full"
+    >
+      <ul>
+        <li class="mb-8">
+          <a
+            aria-current="page"
+            >Início</a
+          >
+        </li>
+        <li class="mb-8">
+          <a
+            aria-current="page"
+            >Sobre nós</a
+          >
+        </li>
+        <li class="mb-8">
+          <a
+            aria-current="page"
+            >Nosso time</a
+          >
+        </li>
+
+        <li class="mb-8">
+          <a
+            aria-current="page"
+            >Clientes</a
+          >
+        </li>
+
+        <li class="mb-8">
+          <a
+            aria-current="page"
+            >Contato</a
+          >
+        </li>
+
+        <li class="mb-8">
+        </li>
+      </ul>
+      <a
+        href=""
+        class="w-full bg-white text-primary lg:text-xl rounded-xl px-4 md:px-10 py-3 md:py-4 font-bold text-md inline-block text-center"
+      >
+        Entrar em Contato
+      </a>
+    </div>
+  </nav>
+</header>
