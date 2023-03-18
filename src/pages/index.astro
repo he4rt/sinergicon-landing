@@ -38,7 +38,7 @@ import TeamMember from '../components/TeamMember.astro'
       subtitle="LOREM IPSUM DOLOR SIT"
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum. Orci varius natoque penatibus magnis dis parturient montes, nascetur ridiculus mus."
     >
-      <h1 slot="title">
+      <h1 slot="title" class="text-xl lg:text-5xl">
         Venha conhecer os nossos <span class="text-primary">serviços</span>
       </h1>
       <div
@@ -61,7 +61,7 @@ import TeamMember from '../components/TeamMember.astro'
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
       bgClass="bg-white"
     >
-      <h1 slot="title">
+      <h1 slot="title" class="text-xl lg:text-5xl">
         Venha conhecer a nossa <span class="text-primary">equipe</span>
       </h1>
       <div class="grid grid-cols-1 gap-8 md:grid-cols-4 md:grid-rows-1">
@@ -82,7 +82,7 @@ import TeamMember from '../components/TeamMember.astro'
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
       bgClass="bg-light"
     >
-      <h1 slot="title">
+      <h1 slot="title" class="text-xl lg:text-5xl">
         Confira alguns <span class="text-primary">depoimentos</span> de nossos clientes
       </h1>
       <div class="w-full overflow-scroll">
@@ -172,16 +172,16 @@ import TeamMember from '../components/TeamMember.astro'
       </div>
     </SectionWrapper>
 
-    <footer class="relative mt-24 flex flex-col px-7 md:px-0">
+    <footer class="relative mt-24 flex flex-col px-4 xl:px-0">
       <div
-        class="absolute left-0 bottom-0 z-10 h-2/6 w-full bg-primary md:h-2/4"
+        class="absolute left-0 bottom-0 z-10 h-2/6 w-full bg-primary xl:h-2/4"
       >
       </div>
       <div
-        class="relative z-20 mx-auto flex max-w-[1400px] flex-col md:flex-row"
+        class="relative z-20 mx-auto flex max-w-[1400px] flex-col xl:flex-row"
       >
         <FooterForms />
-        <div class="mt-12 flex flex-col md:pl-16">
+        <div class="mt-12 flex flex-col xl:pl-16">
           <div class="font-work">
             <h2 class="font-montserrat text-xl font-bold text-black">
               Entrar em contato
@@ -200,10 +200,10 @@ import TeamMember from '../components/TeamMember.astro'
                 ))
               }
             </ul>
-            <div class="mb-16 flex justify-center md:justify-start">
+            <div class="mb-16 flex justify-center xl:justify-start">
               {
                 footerSocials.map((social) => (
-                  <div class="mr-7 mt-4 flex h-[2rem] w-[2rem] cursor-pointer items-center justify-center rounded-[4px] bg-gray transition hover:bg-primary hover:shadow-lg hover:shadow-primary/80">
+                  <div class="mr-7 mt-4 flex h-[2rem] w-[2rem] cursor-pointer items-center justify-center rounded-[4px] bg-gray transition hover:bg-primary hover:shadow-xl hover:shadow-primary/80">
                     <img src={social.path} alt={social.alt} />
                   </div>
                 ))
@@ -216,7 +216,7 @@ import TeamMember from '../components/TeamMember.astro'
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
               dimentum facilisis interdum.
             </p>
-            <ul class="mt-8 flex flex-col space-y-4 md:flex-row md:space-y-0">
+            <ul class="mt-8 flex flex-col space-y-4 lg:flex-row lg:space-y-0">
               {
                 navItems.map((item) => (
                   <li class="mr-12 whitespace-nowrap font-montserrat font-bold">
@@ -229,9 +229,9 @@ import TeamMember from '../components/TeamMember.astro'
         </div>
       </div>
       <div
-        class="relative z-20 mt-8 flex w-full justify-center border-t border-[#97D2FF] py-9 text-white md:mt-16"
+        class="relative z-20 mt-8 flex w-full justify-center border-t border-[#97D2FF] py-9 text-white xl:mt-16"
       >
-        <p class="text-center font-montserrat font-bold md:text-start">
+        <p class="text-center font-montserrat font-bold xl:text-start">
           © 2022 Sinergicon. Todos os direitos reservados.
         </p>
       </div>
