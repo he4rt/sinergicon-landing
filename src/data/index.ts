@@ -59,3 +59,34 @@ export const navItems = [
   { id: 4, label: 'Clientes', to: '#clientes' },
   { id: 5, label: 'Contato', to: '#contato' },
 ]
+
+export const teamMembers = [
+  {
+    id: 1,
+    name: 'Paulo Pires',
+    role: 'Sócio/Contador',
+    picture:
+      'https://img.freepik.com/fotos-premium/garota-de-anime-assistindo-a-ilustracao-3d-do-por-do-sol_717906-1417.jpg?w=2000',
+  },
+  {
+    id: 2,
+    name: 'Paulo Pires',
+    role: 'Sócio/Contador',
+    picture:
+      'https://img.freepik.com/fotos-premium/garota-de-anime-assistindo-a-ilustracao-3d-do-por-do-sol_717906-1417.jpg?w=2000',
+  },
+  {
+    id: 1,
+    name: 'Paulo Pires',
+    role: 'Sócio/Contador',
+    picture:
+      'https://img.freepik.com/fotos-premium/garota-de-anime-assistindo-a-ilustracao-3d-do-por-do-sol_717906-1417.jpg?w=2000',
+  },
+  {
+    id: 4,
+    name: 'Paulo Pires',
+    role: 'Sócio/Contador',
+    picture:
+      'https://img.freepik.com/fotos-premium/garota-de-anime-assistindo-a-ilustracao-3d-do-por-do-sol_717906-1417.jpg?w=2000',
+  },
+]

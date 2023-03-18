@@ -6,12 +6,19 @@ import '@fontsource/space-grotesk/700.css'
 
 import ServiceItem from '../components/ServiceItem.astro'
 
-import { footerData, ourServicesList, footerSocials, navItems } from '../data'
+import {
+  footerData,
+  ourServicesList,
+  footerSocials,
+  navItems,
+  teamMembers,
+} from '../data'
 
 import SectionWrapper from '../components/SectionWrapper.astro'
 import TestimonyItem from '../components/TestimonyItem.astro'
 
 import FooterForms from '../components/FooterForms.astro'
+import TeamMember from '../components/TeamMember.astro'
 ---
 
 <html>
@@ -40,6 +47,28 @@ import FooterForms from '../components/FooterForms.astro'
               title={service.title}
               content={service.content}
               color={service.rgbColor}
+            />
+          ))
+        }
+      </div>
+    </SectionWrapper>
+
+    <SectionWrapper
+      subtitle="LOREM IPSUM DOLOR SIT"
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+      bgClass="bg-white"
+    >
+      <h1 slot="title">
+        Venha conhecer a nossa <span class="text-primary">equipe</span>
+      </h1>
+
+      <div class="grid grid-cols-1 gap-x-8 md:grid-cols-4 md:grid-rows-1">
+        {
+          teamMembers.map((member) => (
+            <TeamMember
+              name={member.name}
+              role={member.role}
+              picture={member.picture}
             />
           ))
         }
