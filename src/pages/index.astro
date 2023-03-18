@@ -31,6 +31,7 @@ import TeamMember from '../components/TeamMember.astro'
     <title>Sinergicon</title>
   </head>
   <body>
+    <Navbar />
     <SectionWrapper
       subtitle="LOREM IPSUM DOLOR SIT"
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum. Orci varius natoque penatibus magnis dis parturient montes, nascetur ridiculus mus."
@@ -62,8 +63,7 @@ import TeamMember from '../components/TeamMember.astro'
       <h1 slot="title">
         Venha conhecer a nossa <span class="text-primary">equipe</span>
       </h1>
-
-      <div class="grid grid-cols-1 gap-x-8 md:grid-cols-4 md:grid-rows-1">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-4 md:grid-rows-1">
         {
           teamMembers.map((member) => (
             <TeamMember
@@ -235,6 +235,5 @@ import TeamMember from '../components/TeamMember.astro'
         </p>
       </div>
     </footer>
-    >>>>>>> c278dad (feat: install and setup eslint-plugin-tailwindcss)
   </body>
 </html>
