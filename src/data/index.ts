@@ -59,3 +59,34 @@ export const navItems = [
   { id: 4, label: 'Clientes', to: '#clientes' },
   { id: 5, label: 'Contato', to: '#contato' },
 ]
+
+export const teamMembers = [
+  {
+    id: 1,
+    name: 'Paulo Pires',
+    role: 'Sócio/Contador',
+    picture:
+      'https://as1.ftcdn.net/v2/jpg/02/43/11/76/1000_F_243117659_eNEhNakRBBdwMIJo1y0XF3TFahMVdvT8.jpg',
+  },
+  {
+    id: 2,
+    name: 'Paulo Pires',
+    role: 'Sócio/Contador',
+    picture:
+      'https://as1.ftcdn.net/v2/jpg/02/43/11/76/1000_F_243117659_eNEhNakRBBdwMIJo1y0XF3TFahMVdvT8.jpg',
+  },
+  {
+    id: 1,
+    name: 'Paulo Pires',
+    role: 'Sócio/Contador',
+    picture:
+      'https://as1.ftcdn.net/v2/jpg/02/43/11/76/1000_F_243117659_eNEhNakRBBdwMIJo1y0XF3TFahMVdvT8.jpg',
+  },
+  {
+    id: 4,
+    name: 'Paulo Pires',
+    role: 'Sócio/Contador',
+    picture:
+      'https://as1.ftcdn.net/v2/jpg/02/43/11/76/1000_F_243117659_eNEhNakRBBdwMIJo1y0XF3TFahMVdvT8.jpg',
+  },
+]
