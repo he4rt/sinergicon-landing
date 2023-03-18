@@ -5,7 +5,8 @@ import '@fontsource/work-sans/500.css'
 import '@fontsource/space-grotesk/700.css'
 
 import ServiceItem from '../components/ServiceItem.astro'
-import Navbar from '../components/Navbar.astro'
+import Navbar from '../components/navbar.astro'
+import Hero from '../components/hero.astro'
 
 import {
   footerData,
@@ -31,7 +32,8 @@ import TeamMember from '../components/TeamMember.astro'
     <title>Sinergicon</title>
   </head>
   <body>
-    <Navbar />
+    <Navbar></Navbar>
+    <Hero></Hero>
     <SectionWrapper
       subtitle="LOREM IPSUM DOLOR SIT"
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum. Orci varius natoque penatibus magnis dis parturient montes, nascetur ridiculus mus."
