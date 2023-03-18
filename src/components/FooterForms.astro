@@ -1,0 +1,47 @@
+---
+import FormInput from './FormInput.astro'
+
+const formFields = [
+  {
+    label: 'Nome',
+    placeholder: 'Digite seu nome',
+    errorMsg: 'O nome deve conter mais que 3 caracteres.',
+    type: 'input',
+  },
+  {
+    label: 'E-mail',
+    placeholder: 'Digite seu e-mail',
+    errorMsg: 'Insira um e-mail valido.',
+    error: true,
+    type: 'input',
+  },
+  {
+    label: 'Mensagem',
+    placeholder: 'Digite a sua mensagem',
+    errorMsg: 'OInsira um e-mail valido.',
+    type: 'textarea',
+  },
+]
+---
+
+<div class="flex min-w-[576px] flex-col rounded-xl bg-white p-8 shadow-lg">
+  <h3 class="font-montserrat text-xl font-bold text-dark">
+    Entre em contato conosco
+  </h3>
+
+  {
+    formFields.map((form) => (
+      <FormInput
+        label={form.label}
+        placeholder={form.placeholder}
+        errorMsg={form.errorMsg}
+        type={form.type}
+      />
+    ))
+  }
+
+  <button
+    class="mt-8 rounded-3xl bg-primary py-3 font-space text-white shadow-md"
+    >Enviar</button
+  >
+</div>

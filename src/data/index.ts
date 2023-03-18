@@ -30,3 +30,32 @@ export const ourServicesList = [
     rgbColor: '145, 61, 252',
   },
 ]
+
+export const footerData = [
+  {
+    iconPath: '/icons/house.svg',
+    text: 'Rua Castro Alves, 315, Cachoeira Paulista - SP',
+  },
+  {
+    iconPath: '/icons/phone.svg',
+    text: '55 (00) 00000 - 0000',
+  },
+  {
+    iconPath: '/icons/mail.svg',
+    text: 'contabilidade@sinergicon.com.br',
+  },
+]
+
+export const footerSocials = [
+  { path: '/icons/instagram.svg', alt: 'Instagram icon' },
+  { path: '/icons/twitter.svg', alt: 'Twitter icon' },
+  { path: '/icons/linkedin.svg', alt: 'Linkedin icon' },
+]
+
+export const navItems = [
+  { id: 1, label: 'Início', to: '#inicio' },
+  { id: 2, label: 'Sobre nós', to: '#sobre-nos2' },
+  { id: 3, label: 'Nosso time', to: '#nosso-time' },
+  { id: 4, label: 'Clientes', to: '#clientes' },
+  { id: 5, label: 'Contato', to: '#contato' },
+]
