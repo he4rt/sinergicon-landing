@@ -1,5 +1,6 @@
 ---
 import '@fontsource/montserrat/700.css'
+import '@fontsource/montserrat/500.css'
 import '@fontsource/work-sans/500.css'
 import '@fontsource/space-grotesk/700.css'
 
@@ -7,7 +8,19 @@ import ServiceItem from '../components/ServiceItem.astro'
 import Navbar from '../components/navbar.astro'
 import Hero from '../components/hero.astro'
 
-import { ourServicesList } from '../data'
+import {
+  footerData,
+  ourServicesList,
+  footerSocials,
+  navItems,
+  teamMembers,
+} from '../data'
+
+import SectionWrapper from '../components/SectionWrapper.astro'
+import TestimonyItem from '../components/TestimonyItem.astro'
+
+import FooterForms from '../components/FooterForms.astro'
+import TeamMember from '../components/TeamMember.astro'
 ---
 
 <html>
@@ -21,38 +34,207 @@ import { ourServicesList } from '../data'
   <body>
     <Navbar></Navbar>
     <Hero></Hero>
-    <section class="flex flex-col items-center justify-center">
-      <div class="max-w-[770px] text-center">
-        <div class="flex flex-col items-center font-montserrat">
-          <h4 class="font-bold uppercase text-primary">
-            LOREM IPSUM DOLOR SIT
-          </h4>
-          <h1 class="my-4 w-10/12 text-[2.6rem] font-bold text-dark">
-            Venha conhecer os nossos <span class="text-primary">serviços</span>
-          </h1>
-        </div>
-        <p class="font-work text-gray">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          dimentum facilisis interdum. Orci varius natoque penatibus et magnis
-          dis parturient montes, nascetur ridiculus mus.
-        </p>
-      </div>
-
-      <div class="my-11 h-[1px] w-full bg-lightgray"></div>
-
+    <SectionWrapper
+      subtitle="LOREM IPSUM DOLOR SIT"
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum. Orci varius natoque penatibus magnis dis parturient montes, nascetur ridiculus mus."
+    >
+      <h1 slot="title">
+        Venha conhecer os nossos <span class="text-primary">serviços</span>
+      </h1>
       <div
-        class="my-5 grid max-w-[1184px] grid-cols-3 grid-rows-2 gap-x-12 gap-y-7"
+        class="my-5 grid max-w-[1184px] grid-cols-1 gap-x-6 gap-y-8 px-5 md:grid-cols-3 md:grid-rows-2 md:px-0"
       >
         {
           ourServicesList.map((service) => (
             <ServiceItem
               title={service.title}
               content={service.content}
-              color={service.color}
+              color={service.rgbColor}
             />
           ))
         }
       </div>
-    </section>
+    </SectionWrapper>
+
+    <SectionWrapper
+      subtitle="LOREM IPSUM DOLOR SIT"
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+      bgClass="bg-white"
+    >
+      <h1 slot="title">
+        Venha conhecer a nossa <span class="text-primary">equipe</span>
+      </h1>
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-4 md:grid-rows-1">
+        {
+          teamMembers.map((member) => (
+            <TeamMember
+              name={member.name}
+              role={member.role}
+              picture={member.picture}
+            />
+          ))
+        }
+      </div>
+    </SectionWrapper>
+
+    <SectionWrapper
+      subtitle="LOREM IPSUM DOLOR SIT"
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+      bgClass="bg-light"
+    >
+      <h1 slot="title">
+        Confira alguns <span class="text-primary">depoimentos</span> de nossos clientes
+      </h1>
+      <div class="w-full overflow-scroll">
+        <div class="flex gap-8 p-8">
+          <TestimonyItem
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum."
+            author={{
+              name: 'Mc Poze do Rodo',
+              role: 'Cantor',
+              imageUrl:
+                'https://i.pinimg.com/474x/ff/0d/f4/ff0df44c4cd43c7cd964e36b4354e56b.jpg',
+            }}
+          />
+          <TestimonyItem
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum."
+            author={{
+              name: 'Mc Poze do Rodo',
+              role: 'Cantor',
+              imageUrl:
+                'https://i.pinimg.com/474x/ff/0d/f4/ff0df44c4cd43c7cd964e36b4354e56b.jpg',
+            }}
+          />
+          <TestimonyItem
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum."
+            author={{
+              name: 'Mc Poze do Rodo',
+              role: 'Cantor',
+              imageUrl:
+                'https://i.pinimg.com/474x/ff/0d/f4/ff0df44c4cd43c7cd964e36b4354e56b.jpg',
+            }}
+          />
+          <TestimonyItem
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum."
+            author={{
+              name: 'Mc Poze do Rodo',
+              role: 'Cantor',
+              imageUrl:
+                'https://i.pinimg.com/474x/ff/0d/f4/ff0df44c4cd43c7cd964e36b4354e56b.jpg',
+            }}
+          />
+          <TestimonyItem
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum."
+            author={{
+              name: 'Mc Poze do Rodo',
+              role: 'Cantor',
+              imageUrl:
+                'https://i.pinimg.com/474x/ff/0d/f4/ff0df44c4cd43c7cd964e36b4354e56b.jpg',
+            }}
+          />
+          <TestimonyItem
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum."
+            author={{
+              name: 'Mc Poze do Rodo',
+              role: 'Cantor',
+              imageUrl:
+                'https://i.pinimg.com/474x/ff/0d/f4/ff0df44c4cd43c7cd964e36b4354e56b.jpg',
+            }}
+          />
+          <TestimonyItem
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum."
+            author={{
+              name: 'Mc Poze do Rodo',
+              role: 'Cantor',
+              imageUrl:
+                'https://i.pinimg.com/474x/ff/0d/f4/ff0df44c4cd43c7cd964e36b4354e56b.jpg',
+            }}
+          />
+          <TestimonyItem
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum."
+            author={{
+              name: 'Mc Poze do Rodo',
+              role: 'Cantor',
+              imageUrl:
+                'https://i.pinimg.com/474x/ff/0d/f4/ff0df44c4cd43c7cd964e36b4354e56b.jpg',
+            }}
+          />
+          <TestimonyItem
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum."
+            author={{
+              name: 'Mc Poze do Rodo',
+              role: 'Cantor',
+              imageUrl:
+                'https://i.pinimg.com/474x/ff/0d/f4/ff0df44c4cd43c7cd964e36b4354e56b.jpg',
+            }}
+          />
+        </div>
+      </div>
+    </SectionWrapper>
+
+    <footer class="relative mt-24 flex flex-col px-7 md:px-0">
+      <div
+        class="absolute left-0 bottom-0 z-10 h-2/6 w-full bg-primary md:h-2/4"
+      >
+      </div>
+      <div
+        class="relative z-20 mx-auto flex max-w-[1400px] flex-col md:flex-row"
+      >
+        <FooterForms />
+        <div class="mt-12 flex flex-col md:pl-16">
+          <div class="font-work">
+            <h2 class="font-montserrat text-xl font-bold text-black">
+              Entrar em contato
+            </h2>
+            <p class="mt-3 mb-6 font-medium leading-5 text-gray">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              dimentum facilisis interdum.
+            </p>
+            <ul>
+              {
+                footerData.map((data) => (
+                  <li class="my-5 flex text-gray">
+                    <img src={data.iconPath} />
+                    <span class="ml-5 font-work font-medium">{data.text}</span>
+                  </li>
+                ))
+              }
+            </ul>
+            <div class="mb-16 flex justify-center md:justify-start">
+              {
+                footerSocials.map((social) => (
+                  <div class="mr-7 mt-4 flex h-[2rem] w-[2rem] cursor-pointer items-center justify-center rounded-[4px] bg-gray transition hover:bg-primary hover:shadow-lg hover:shadow-primary/80">
+                    <img src={social.path} alt={social.alt} />
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+          <div class="text-white">
+            <h1 class="font-montserrat text-[2rem] font-bold">SINERGICON</h1>
+            <p class="mt-3 font-work">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              dimentum facilisis interdum.
+            </p>
+            <ul class="mt-8 flex flex-col space-y-4 md:flex-row md:space-y-0">
+              {
+                navItems.map((item) => (
+                  <li class="mr-12 whitespace-nowrap font-montserrat font-bold">
+                    <a href={item.to}>{item.label}</a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        class="relative z-20 mt-8 flex w-full justify-center border-t border-[#97D2FF] py-9 text-white md:mt-16"
+      >
+        <p class="text-center font-montserrat font-bold md:text-start">
+          © 2022 Sinergicon. Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
