@@ -5,7 +5,7 @@ import '@fontsource/work-sans/500.css'
 import '@fontsource/space-grotesk/700.css'
 
 import ServiceItem from '../components/ServiceItem.astro'
-import Navbar from '../components/navbar.astro'
+import Navbar from '../components/Navbar.astro'
 import Hero from '../components/hero.astro'
 
 import {
@@ -23,7 +23,7 @@ import FooterForms from '../components/FooterForms.astro'
 import TeamMember from '../components/TeamMember.astro'
 ---
 
-<html>
+<html class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -32,11 +32,12 @@ import TeamMember from '../components/TeamMember.astro'
     <title>Sinergicon</title>
   </head>
   <body>
-    <Navbar></Navbar>
-    <Hero></Hero>
+    <Navbar />
+    <Hero />
     <SectionWrapper
       subtitle="LOREM IPSUM DOLOR SIT"
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum. Orci varius natoque penatibus magnis dis parturient montes, nascetur ridiculus mus."
+      id="sobre-nos"
     >
       <h1 slot="title" class="text-xl lg:text-5xl">
         Venha conhecer os nossos <span class="text-primary">serviços</span>
@@ -60,6 +61,7 @@ import TeamMember from '../components/TeamMember.astro'
       subtitle="LOREM IPSUM DOLOR SIT"
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
       bgClass="bg-white"
+      id="nosso-time"
     >
       <h1 slot="title" class="text-xl lg:text-5xl">
         Venha conhecer a nossa <span class="text-primary">equipe</span>
@@ -81,6 +83,7 @@ import TeamMember from '../components/TeamMember.astro'
       subtitle="LOREM IPSUM DOLOR SIT"
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
       bgClass="bg-light"
+      id="clientes"
     >
       <h1 slot="title" class="text-xl lg:text-5xl">
         Confira alguns <span class="text-primary">depoimentos</span> de nossos clientes
@@ -172,7 +175,7 @@ import TeamMember from '../components/TeamMember.astro'
       </div>
     </SectionWrapper>
 
-    <footer class="relative lg:mt-32 flex flex-col px-4 xl:px-0">
+    <footer class="relative mt-24 flex flex-col px-7 md:px-0" id="contato">
       <div
         class="absolute left-0 bottom-0 z-10 h-2/6 w-full bg-primary xl:h-2/4"
       >

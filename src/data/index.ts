@@ -54,7 +54,7 @@ export const footerSocials = [
 
 export const navItems = [
   { id: 1, label: 'Início', to: '#inicio' },
-  { id: 2, label: 'Sobre nós', to: '#sobre-nos2' },
+  { id: 2, label: 'Sobre nós', to: '#sobre-nos' },
   { id: 3, label: 'Nosso time', to: '#nosso-time' },
   { id: 4, label: 'Clientes', to: '#clientes' },
   { id: 5, label: 'Contato', to: '#contato' },
