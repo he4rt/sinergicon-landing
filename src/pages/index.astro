@@ -4,6 +4,7 @@ import '@fontsource/work-sans/500.css'
 import '@fontsource/space-grotesk/700.css'
 
 import ServiceItem from '../components/ServiceItem.astro'
+import Navbar from '../js/navbar.astro'
 
 import { ourServicesList } from '../data'
 ---
@@ -17,6 +18,7 @@ import { ourServicesList } from '../data'
     <title>Sinergicon</title>
   </head>
   <body>
+    <Navbar></Navbar>
     <section class="flex flex-col items-center justify-center">
       <div class="max-w-[770px] text-center">
         <div class="flex flex-col items-center font-montserrat">
