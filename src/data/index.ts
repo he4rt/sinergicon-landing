@@ -34,11 +34,11 @@ export const ourServicesList = [
 export const footerData = [
   {
     iconPath: '/icons/house.svg',
-    text: 'Rua Castro Alves, 315, Cachoeira Paulista - SP',
+    text: 'Rua Jose Francisco Ribeiro, 97, Cachoeira Paulista – SP',
   },
   {
     iconPath: '/icons/phone.svg',
-    text: '55 (00) 00000 - 0000',
+    text: '55 (12) 98857-2292',
   },
   {
     iconPath: '/icons/mail.svg',
@@ -47,9 +47,9 @@ export const footerData = [
 ]
 
 export const footerSocials = [
-  { path: '/icons/instagram.svg', alt: 'Instagram icon' },
-  { path: '/icons/twitter.svg', alt: 'Twitter icon' },
-  { path: '/icons/linkedin.svg', alt: 'Linkedin icon' },
+  { path: '/icons/instagram.svg', alt: 'Instagram icon', link : 'https://www.instagram.com/sinergicon/'},
+  { path: '/icons/whats.svg', alt: 'WhatsApp icon', link : 'https://api.whatsapp.com/send/?phone=5512988572292&text&type=phone_number&app_absent=0'},
+  { path: '/icons/linkedin.svg', alt: 'Linkedin icon' ,link : 'https://www.linkedin.com/company/sinergicon/'},
 ]
 
 export const navItems = [

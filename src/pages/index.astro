@@ -84,37 +84,37 @@ import TeamMember from '../components/TeamMember.astro'
 
     <SectionWrapper
       subtitle="LOREM IPSUM DOLOR SIT"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+      description="Depoimentos reais, resultado de nosso empenho, dedicação em trazer o máximo de benefícios para aqueles que depositam sua confiança em nós!"
       bgClass="bg-light"
       id="clientes"
     >
       <h1 slot="title" class="text-xl lg:text-5xl">
-        Confira alguns <span class="text-primary">depoimentos</span> de nossos clientes
+        O que nossos clientes falam sobre nós
       </h1>
       <div class="w-full overflow-scroll">
         <div class="flex gap-8 p-8">
           <TestimonyItem
-            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum."
+            content="Atendimento impecável e muita responsabilidade desde o início com todos os detalhes da minha empresa! Vocês são incríveis! indico pra todo mundo! é um trabalho em que, devemos depositar confiança e a Sinergicon é a melhor para isso!"
             author={{
-              name: 'Mc Poze do Rodo',
+              name: 'Biteti Beauty',
               role: 'Cantor',
               imageUrl:
                 'https://i.pinimg.com/474x/ff/0d/f4/ff0df44c4cd43c7cd964e36b4354e56b.jpg',
             }}
           />
           <TestimonyItem
-            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum."
+            content="Para o sucesso de um negócio precisamos de alguns parceiros que nos dê suporte e garantias para que possamos crescer de forma sustentável e segura, e a Sinergicon é uma destas empresas parceiras que contribui como desenvolvimento da Lírio do Vale"
             author={{
-              name: 'Mc Poze do Rodo',
+              name: 'Lirio do Vale',
               role: 'Cantor',
               imageUrl:
                 'https://i.pinimg.com/474x/ff/0d/f4/ff0df44c4cd43c7cd964e36b4354e56b.jpg',
             }}
           />
           <TestimonyItem
-            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dimentum facilisis interdum."
+            content="Muito solícitos aos questionamentos, tanto fiscal, quanto a parte de Rh. Sempre prontos a auxiliar em dúvidas."
             author={{
-              name: 'Mc Poze do Rodo',
+              name: 'Supreme Móveis',
               role: 'Cantor',
               imageUrl:
                 'https://i.pinimg.com/474x/ff/0d/f4/ff0df44c4cd43c7cd964e36b4354e56b.jpg',
@@ -210,7 +210,9 @@ import TeamMember from '../components/TeamMember.astro'
               {
                 footerSocials.map((social) => (
                   <div class="mr-7 mt-4 flex h-[2rem] w-[2rem] cursor-pointer items-center justify-center rounded-[4px] bg-gray transition hover:bg-primary hover:shadow-xl hover:shadow-primary/80">
-                    <img src={social.path} alt={social.alt} />
+                    <a href="">
+                      <img src={social.path} alt={social.alt} />
+                    </a>
                   </div>
                 ))
               }
